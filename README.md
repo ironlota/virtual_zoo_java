@@ -1,2 +1,2 @@
-# virtual_zoo
-Virtual Zoo for OOP Project using C++
+# virtual_zoo_java
+Java edition of virtual zoo
