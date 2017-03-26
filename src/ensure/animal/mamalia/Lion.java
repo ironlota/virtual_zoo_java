@@ -6,12 +6,12 @@ package ensure.animal.mamalia;
  */
 public class Lion extends Mamalia {
     //methods
-    public Lion(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+    public Lion(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
-    public float getTotalFood() {
-        return (float) (super.getWeight() * 0.15);
+    public double getTotalFood() {
+        return (double) (super.getWeight() * 0.15);
     }
     public void interact(){
         System.out.println("Roar!");

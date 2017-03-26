@@ -6,12 +6,12 @@ package ensure.animal.amphibi;
  */
 public class Ostrich extends Amphibi {
     //methods
-    public Ostrich(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+    public Ostrich(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
-    public float getTotalFood() {
-        return (float) (super.getWeight() * 0.01);
+    public double getTotalFood() {
+        return (double) (super.getWeight() * 0.01);
     }
     public void interact(){
         System.out.println("Ooookkk!");

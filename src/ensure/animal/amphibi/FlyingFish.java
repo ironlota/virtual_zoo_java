@@ -6,12 +6,12 @@ package ensure.animal.amphibi;
  */
 public class FlyingFish extends Amphibi {
     //methods
-    public FlyingFish(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+    public FlyingFish(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
-    public float getTotalFood() {
-        return (float) (super.getWeight() * 0.01);
+    public double getTotalFood() {
+        return (double) (super.getWeight() * 0.01);
     }
     public void interact(){
         System.out.println("Swush!");

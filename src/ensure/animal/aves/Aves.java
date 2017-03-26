@@ -8,7 +8,7 @@ import ensure.animal.Animal;
  */
 abstract class Aves extends Animal {
     //methods
-    public Aves(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+    public Aves(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 

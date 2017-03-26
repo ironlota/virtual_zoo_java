@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 abstract public class Animal {
     //private data member
     private String name;
-    private float weight;
+    private double weight;
     private boolean tamed;
     private int loc_x;
     private int loc_y;
@@ -18,8 +18,11 @@ abstract public class Animal {
     private static int min = 0; //0 = up, 1 = down, 2 = right, 3 = left
     private static int max = 4;
 
+    public Animal() {
+
+    }
     //Default Constructor
-    public Animal(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat) {
+    public Animal(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat) {
         name = inputName;
         weight = inputWeight;
         tamed = isTamed;
@@ -33,7 +36,7 @@ abstract public class Animal {
     public String getName() {
         return name;
     }
-    public float getWeight() {
+    public double getWeight() {
         return weight;
     }
     public boolean isTamed(){
@@ -56,7 +59,7 @@ abstract public class Animal {
     public void setName(String inputName) {
         name = inputName;
     }
-    public void setWeight(float inputWeight) {
+    public void setWeight(double inputWeight) {
         weight = inputWeight;
     }
     public void setTamed(boolean inputTamed){
@@ -80,7 +83,7 @@ abstract public class Animal {
      * @brief getTotalFood is a function to get the total food that an animal eats
      * @return float depends on each animal
      * */
-    protected abstract float getTotalFood();
+    protected abstract double getTotalFood();
     /**
      * @brief interact is function that prints out a message
      * */

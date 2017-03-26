@@ -6,12 +6,12 @@ package ensure.animal.mamalia;
  */
 public class Girrafe extends Mamalia {
     //methods
-    public Girrafe(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+    public Girrafe(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
-    public float getTotalFood() {
-        return (float) (super.getWeight() * 0.15);
+    public double getTotalFood() {
+        return (double) (super.getWeight() * 0.15);
     }
     public void interact(){
         System.out.println("Brrrr!");

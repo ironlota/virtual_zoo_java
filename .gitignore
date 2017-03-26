@@ -45,3 +45,4 @@ docs/
 # Intellij Project
 .idea/
 virtual_zoo_java.iml
+out/

@@ -6,12 +6,12 @@ package ensure.animal.pisces;
  */
 public class Starfish extends Pisces {
     //methods
-    public Starfish(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+    public Starfish(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
-    public float getTotalFood() {
-        return (float) (super.getWeight() * 0.15);
+    public double getTotalFood() {
+        return (double) (super.getWeight() * 0.15);
     }
     public void interact(){
         System.out.println("Blub!");

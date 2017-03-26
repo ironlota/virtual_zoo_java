@@ -8,7 +8,7 @@ import ensure.animal.Animal;
  */
 abstract class Mamalia extends Animal {
     //methods
-    public Mamalia(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+    public Mamalia(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
