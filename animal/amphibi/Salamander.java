@@ -6,8 +6,8 @@ package animal.amphibi;
  */
 public class Salamander extends Amphibi {
     //methods
-    public Salamander(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType);
+    public Salamander(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
     public float getTotalFood() {

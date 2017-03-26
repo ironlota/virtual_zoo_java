@@ -6,8 +6,8 @@ package animal.mamalia;
  */
 public class Elephant extends Mamalia {
     //methods
-    public Elephant(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType);
+    public Elephant(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
     public float getTotalFood() {

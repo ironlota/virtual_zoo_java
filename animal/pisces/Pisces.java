@@ -8,8 +8,8 @@ import animal.Animal;
  */
 abstract class Pisces extends Animal {
     //methods
-    public Pisces(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType);
+    public Pisces(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
     //TODO make some private data members

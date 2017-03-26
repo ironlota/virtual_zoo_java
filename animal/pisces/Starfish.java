@@ -6,8 +6,8 @@ package animal.pisces;
  */
 public class Starfish extends Pisces {
     //methods
-    public Starfish(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType);
+    public Starfish(String inputName, float inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
     public float getTotalFood() {
