@@ -1,0 +1,40 @@
+PPPPPP___PPPPPPPPPPPPPPPP___PPPPPPPPPPPP					LEGENDA 
+PPPPPP   PPPPPPPPPPPPPPPP   PPPPPPPPPPPP		 Facility :
+PPPPPR                       OOObOOOkOOp		 Road = ' '				 Entrance/Exit = _
+PPPPPR   R     f~~~~~~~h~~m  OeoOOOOOObO		 Restaurant = R				 Park = P
+PPPPPR   R     ~~f~~~p~~h~~   OOOpOeOOOO		 Land = x				 Water = ~
+PPPPPR   R     ~~~~f~~~s~~p   OOOOoOOkOO		 Flying = O
+bOOOR   R      ~~m~~~~p~~~~h           P
+OpOOR   R      ~~~~~~~~~~~~~   PPPPPPPPP		 Animal :
+OOoOR   R                       PPPPPPPP		 AfricanFrog = a			 Caecilia = c
+OOOOR   R  xdxbxxlxxxxxxxxxxx   s~~~~~~p		 Exolotl = e				 FlyingFish = y
+OOOoR   R  nxxxxxtxxbxxxxxxxx   ~~~~p~~~		 Ostrich = i				 Salamander = r
+ObOR   R  xxxxxxxxxxxtxxxxgnx    ~s~~~p~		 BirdOfParadise = b			 Eagle = e
+OOeR   R  xxxxldxxxxxxxnxxxbx    ~~~m~~~		 Hawk = k				 Owl = o
+kOOR   R  xxxxxxxxxxxdxxxxxgx     ~m~~~~		 Peacock = p				 Bear = b
+OOOR                  RR               P		 Deer = d				 Elephant = n
+P  R                  RR  f~~~~   txxxxx		 Girrafe = g				 Lion = l
+P  R                  RR  ~~f~~   xxxxxx		 Tiger = t				 Mantaray = m
+P                     RR  ~~~~h~   xxxxb		 Piranha = p				 Seahorse = h
+PPPPP a~~~~~cxrxxxe   RR  ~~~~~h   lxxxx		 Shark = s				 Starfish = f
+PPPPP ~~c~~~xxxaxxxr  RR  PPPPP    PPPPP
+PPPPP ~~~~~~xrexxxxc  RR  bOOOOOoO    RP
+P                     RR  OOOOOOOe    RP
+oOxtxxxlxxxxOiOkOOOO   RR  OkOOOOO   RPP
+OOxxxtxxlxxxOeOOOOOk   RR  OOeOOOk   RPP
+OOxixxbxxxxxOOeOOkOO   RR  pOOOOOO   RPP
+OObxxxixxtxx           RR  OpObOO   RPPP
+Ooxbxxxxxxxt           RR  OOOOoO   RPPP
+OOxxxxxxxlxl                       y~~~~
+P                                  ~h~m~
+pOoOOOOOOOO     PPPPPPPPP          ~~h~~
+OOOOOyObOO     PPPPPPPPPPPPP      ybOOOO
+~s~~~~~~m      PPPPPPPPPPPPP      OOOOOO
+~~~~p~~~       PPPPPPPPPPPPP      OOOOOb
+p~~~~~~       PPPPPPPPPPPPPP           P
+PPPPPPR   OOOOPPPPPPPPPPPPPPOO         P
+PPPPPPR   OOoPPPPPPPPPPPPPPPOOO   xdxbxx
+PPPPPR   OOpPPPPPPPPPPPPPPPPPOO   gbxxxg
+PPPPPR   OoOPPPPPPPPPPPPPPPPPkO   xxxxxx
+PPPPPR   OOOPPPPPPPPPPPPPPPPPOO   xxxxxx
+PPPPPR___PPPPPPPPPPPPPPPPPPPPOe___xxxxxd
