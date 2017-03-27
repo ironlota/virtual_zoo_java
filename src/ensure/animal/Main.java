@@ -1,13 +1,11 @@
 /*package animal;
 
-import animal.mamalia.Lion;
-import animal.mamalia.Tiger;
-import animal.aves.Eagle;
-import animal.aves.Hawk;
-import animal.amphibi.AfricanFrog;
-import animal.amphibi.Salamander;
-import animal.pisces.Piranha;
-import animal.pisces.Shark;
+import ensure.animal.*;
+import ensure.animal.amphibi.*;
+import ensure.animal.aves.*;
+import ensure.animal.mamalia.*;
+import ensure.animal.pisces.*;
+
 
 public class Main {
     public static void main(String[] args) {

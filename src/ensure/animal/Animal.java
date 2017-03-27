@@ -83,11 +83,11 @@ abstract public class Animal {
      * @brief getTotalFood is a function to get the total food that an animal eats
      * @return float depends on each animal
      * */
-    protected abstract double getTotalFood();
+    public abstract double getTotalFood();
     /**
      * @brief interact is function that prints out a message
      * */
-    protected abstract void interact();
+    public abstract void interact();
     /**
      * @brief move is a method to switch places
      * @param up left available
