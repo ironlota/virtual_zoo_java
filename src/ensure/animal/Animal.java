@@ -17,6 +17,7 @@ abstract public class Animal {
     private String habitatType;
     private static int min = 0; //0 = up, 1 = down, 2 = right, 3 = left
     private static int max = 4;
+    protected char symbol;
 
     public Animal() {
 
@@ -30,6 +31,7 @@ abstract public class Animal {
         loc_y = y;
         foodType = inputFoodType;
         habitatType = inputHabitat;
+        symbol = ' ';
     }
 
     //Getters
@@ -107,6 +109,10 @@ abstract public class Animal {
             }
             return random;
         }
+    }
+
+    public char getSymbol() {
+        return symbol;
     }
 
     //TODO need to save habitat type

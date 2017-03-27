@@ -10,7 +10,7 @@ abstract public class Facility extends Cell {
         super();
     }
 
-    public Facility(int x, int y, String type_, String name_) {
-        super(x,y,type_,null,-1,name_);
+    public Facility(int x, int y, String type_, String name_, char symbol_) {
+        super(x,y,type_,null,-1,name_,symbol_);
     }
 }

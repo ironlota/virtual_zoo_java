@@ -12,5 +12,8 @@ abstract class Aves extends Animal {
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
+    public double getTotalFood() {
+        return (double) (super.getWeight() * 0.15);
+    }
     //TODO make some private data members
 }

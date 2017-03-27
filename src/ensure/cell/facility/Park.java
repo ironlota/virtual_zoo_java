@@ -10,9 +10,10 @@ public class Park extends Facility {
         super();
         type = "Park";
         name = "Park";
+        symbol = 'P';
     }
 
     public Park(int x, int y) {
-        super(x,y,"Park", "Park");
+        super(x,y,"Park", "Park", 'P');;
     }
 }

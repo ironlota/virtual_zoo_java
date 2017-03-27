@@ -8,11 +8,9 @@ public class Tiger extends Mamalia {
     //methods
     public Tiger(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
+        symbol = 't';
     }
 
-    public double getTotalFood(){
-        return (double) (super.getWeight() * 0.1);
-    }
     public void interact(){
         System.out.println("Growl!");
     }

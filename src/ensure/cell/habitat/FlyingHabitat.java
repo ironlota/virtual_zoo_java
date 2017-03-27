@@ -10,9 +10,10 @@ public class FlyingHabitat extends Habitat {
     public FlyingHabitat() {
         super();
         type = "Flying";
+        symbol = 'O';
     }
 
     public <A extends Animal> FlyingHabitat(int x, int y, A a, int id) {
-        super(x,y,"Flying",a, id, "");
+        super(x,y,"Flying",a, id, "", 'O');
     }
 }

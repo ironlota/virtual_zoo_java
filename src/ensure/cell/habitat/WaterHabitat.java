@@ -11,9 +11,10 @@ public class WaterHabitat extends Habitat {
     public WaterHabitat() {
         super();
         type = "Water";
+        symbol = '~';
     }
 
     public <A extends Animal> WaterHabitat(int x, int y, A a, int id) {
-        super(x,y,"Water",a, id, "");
+        super(x,y,"Water",a, id, "", '~');
     }
 }

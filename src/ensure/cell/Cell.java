@@ -10,23 +10,26 @@ import ensure.animal.Animal;
  */
 abstract public class Cell {
     protected int LocX, LocY;
-    protected String name="",type;
+    protected String name,type;
     protected int cage_id;
     protected Animal animal;
+    protected char symbol;
 
     public Cell() {
         LocX = 0;
         LocY = 0;
         type = "";
         name = "";
+        symbol = ' ';
         animal = null;
         cage_id = 0;
     }
 
-    public <A extends Animal> Cell(int x, int y, String type_, A a, int id, String name_) {
+    public <A extends Animal> Cell(int x, int y, String type_, A a, int id, String name_, char symbol_) {
         LocX = x;
         LocY = y;
         type = type_;
+        symbol = symbol_;
         if(a instanceof Animal) {
             animal = a;
         } else {
@@ -48,7 +51,7 @@ abstract public class Cell {
         return type;
     }
 
-    Animal getAnimal(){
+    public Animal getAnimal(){
         return animal;
     }
 
@@ -82,7 +85,11 @@ abstract public class Cell {
     /** @brief GetName
      * Setter variable name
      */
-    public String setName() {
+    public String getName() {
         return name;
+    }
+
+    public char getSymbol() {
+        return symbol;
     }
 }

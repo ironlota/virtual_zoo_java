@@ -8,11 +8,9 @@ public class FlyingFish extends Amphibi {
     //methods
     public FlyingFish(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
+        symbol = 'y';
     }
 
-    public double getTotalFood() {
-        return (double) (super.getWeight() * 0.01);
-    }
     public void interact(){
         System.out.println("Swush!");
     }

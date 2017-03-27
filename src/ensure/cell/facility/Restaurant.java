@@ -10,9 +10,10 @@ public class Restaurant extends Facility {
         super();
         type = "Restaurant";
         name = "Restaurant";
+        symbol = 'R';
     }
 
     public Restaurant(int x, int y, String name_) {
-        super(x,y,"Restaurant", name_);
+        super(x,y,"Restaurant", name_, 'R');
     }
 }

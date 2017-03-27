@@ -10,9 +10,10 @@ public class Road extends Facility {
         super();
         type = "Road";
         name = "Road";
+        symbol = ' ';
     }
 
-    public Road(int x, int y, String name_) {
-        super(x,y,"Road", name_);
+    public Road(int x, int y, String name_, char symbol_) {
+            super(x,y,"Road", name_,' ');
     }
 }

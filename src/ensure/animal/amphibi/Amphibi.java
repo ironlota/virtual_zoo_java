@@ -12,5 +12,9 @@ abstract class Amphibi extends Animal {
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
     }
 
+
+    public double getTotalFood() {
+        return (double) (super.getWeight() * 0.01);
+    }
     //TODO make some private data members
 }

@@ -8,11 +8,9 @@ public class Ostrich extends Amphibi {
     //methods
     public Ostrich(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
         super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
+        symbol = 'i';
     }
 
-    public double getTotalFood() {
-        return (double) (super.getWeight() * 0.01);
-    }
     public void interact(){
         System.out.println("Ooookkk!");
     }
