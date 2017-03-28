@@ -1,7 +1,7 @@
 package ensure.animal.amphibi;
 
 /**
- * @class Exolotl
+ * @brief Exolotl
  * Exolotl merupakan hewan yang berkelas Amphibi dan habitatnya di water dan darat.
  * Created by rayandrew on 3/27/2017.
  */
@@ -16,8 +16,7 @@ public class Exolotl extends Amphibi {
      * @param inputHabitat Menyatakan habitat Animal tersebut.
      */
     public Exolotl(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'e';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'e');
     }
 
     public void interact(){

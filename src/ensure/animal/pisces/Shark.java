@@ -7,8 +7,7 @@ package ensure.animal.pisces;
 public class Shark extends Pisces {
     //methods
     public Shark(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 's';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'s');
     }
 
     public void interact(){

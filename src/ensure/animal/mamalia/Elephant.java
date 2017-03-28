@@ -7,8 +7,7 @@ package ensure.animal.mamalia;
 public class Elephant extends Mamalia {
     //methods
     public Elephant(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'n';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'n');
     }
 
     public void interact(){

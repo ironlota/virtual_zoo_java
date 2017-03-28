@@ -7,8 +7,7 @@ package ensure.animal.mamalia;
 public class Tiger extends Mamalia {
     //methods
     public Tiger(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 't';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'t');
     }
 
     public void interact(){

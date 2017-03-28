@@ -7,8 +7,7 @@ package ensure.animal.aves;
 public class Eagle extends Aves {
     //methods
     public Eagle(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'e';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'e');
     }
 
     public void interact(){

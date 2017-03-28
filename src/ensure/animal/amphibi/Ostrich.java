@@ -7,8 +7,7 @@ package ensure.animal.amphibi;
 public class Ostrich extends Amphibi {
     //methods
     public Ostrich(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'i';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'i');
     }
 
     public void interact(){

@@ -29,6 +29,8 @@ public class Zoo {
             for(int j = 0; j<maxCell; j++) {
                 if(i==maxCell-1 || j==maxCell-1) {
                     cell_.get(i).add(j,new Road(i,j,"RoadExit", '_'));
+                } else if(i==0|| j==0) {
+                    cell_.get(i).add(j,new Road(i,j,"RoadEntrance", '_'));
                 } else {
                     cell_.get(i).add(j,new Road(i,j,"Road", ' '));
                 }
@@ -49,6 +51,8 @@ public class Zoo {
             for(int j = 0; j<maxCell; j++) {
                 if(i==maxCell-1 || j==maxCell-1) {
                     cell_.get(i).add(j,new Road(i,j,"RoadExit", '_'));
+                } else if(i==0|| j==0) {
+                    cell_.get(i).add(j,new Road(i,j,"RoadEntrance", '_'));
                 } else {
                     cell_.get(i).add(j,new Road(i,j,"Road", ' '));
                 }
@@ -113,8 +117,8 @@ public class Zoo {
      * Berfungsi untuk mengambil animal
      * Asumsi bahwa vector animal sudah terdefinisi
      * @return Pointer to Animal
-     * @param integer x
-     * @param integer y
+     * @param int x
+     * @param int y
      */
     public Animal GetAnimal(int x,int y) {
         if(cell_.get(x).get(y).getAnimal() instanceof Animal) {
@@ -129,7 +133,7 @@ public class Zoo {
     /** @brief update
      * Metode untuk update status posisi dari tiap animal
      */
-    void update() {
+    public void update() {
 
     }
 
@@ -145,7 +149,7 @@ public class Zoo {
     /** @brief TotalFood
      * Metode untuk mengambil total makanan dari semua binatang
      */
-    void TotalFood() {
+    public void TotalFood() {
 
     }
 
@@ -155,4 +159,22 @@ public class Zoo {
     /*public void <An extends Animal> AddAnimal(An A) {
 
     }*/
+
+    /** @brief toString
+     * Metode untuk menampilkan isi zoo ke layar
+     */
+    public String toString() {
+        String temp_str = new String();
+        for(int i = 0; i < maxCell; i++) {
+            for(Cell temp : cell_.get(i)) {
+                if(temp.getAnimal() instanceof Animal) {
+                    temp_str += (temp.getAnimal().getSymbol() + " ");
+                } else {
+                    temp_str +=  (temp.getSymbol() + " ");
+                }
+            }
+            temp_str += "\n";
+        }
+        return temp_str;
+    }
 }

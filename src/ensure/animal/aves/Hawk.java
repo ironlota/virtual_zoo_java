@@ -7,8 +7,7 @@ package ensure.animal.aves;
 public class Hawk extends Aves {
     //methods
     public Hawk(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'k';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'k');
     }
 
     public void interact(){

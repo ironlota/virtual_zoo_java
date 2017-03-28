@@ -6,10 +6,10 @@ import ensure.animal.Animal;
  * Created by Aldrich on 3/25/2017.
  * @class amphibi is a type of animal
  */
-abstract class Amphibi extends Animal {
+abstract public class Amphibi extends Animal {
     //methods
-    public Amphibi(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
+    public Amphibi(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat, char symbol_){
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,symbol_);
     }
 
 

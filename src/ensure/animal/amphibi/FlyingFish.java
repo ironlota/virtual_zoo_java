@@ -7,8 +7,7 @@ package ensure.animal.amphibi;
 public class FlyingFish extends Amphibi {
     //methods
     public FlyingFish(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'y';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'y');
     }
 
     public void interact(){

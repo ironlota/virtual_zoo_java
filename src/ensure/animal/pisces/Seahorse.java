@@ -7,8 +7,7 @@ package ensure.animal.pisces;
 public class Seahorse extends Pisces {
     //methods
     public Seahorse(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'h';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'h');
     }
 
     public void interact(){

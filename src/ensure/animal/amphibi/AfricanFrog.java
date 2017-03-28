@@ -7,8 +7,7 @@ package ensure.animal.amphibi;
 public class AfricanFrog extends Amphibi {
     //methods
     public AfricanFrog(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'a';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'a');
     }
 
     public void interact(){

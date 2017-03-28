@@ -7,8 +7,7 @@ package ensure.animal.aves;
 public class Peacock extends Aves {
     //methods
     public Peacock(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat){
-        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat);
-        symbol = 'p';
+        super(inputName,inputWeight,isTamed,x,y,inputFoodType,inputHabitat,'p');
     }
 
     public void interact(){

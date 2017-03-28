@@ -23,7 +23,7 @@ abstract public class Animal {
 
     }
     //Default Constructor
-    public Animal(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat) {
+    public Animal(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat, char symbol_) {
         name = inputName;
         weight = inputWeight;
         tamed = isTamed;
@@ -31,7 +31,7 @@ abstract public class Animal {
         loc_y = y;
         foodType = inputFoodType;
         habitatType = inputHabitat;
-        symbol = ' ';
+        symbol = symbol_;
     }
 
     //Getters
