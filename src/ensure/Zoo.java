@@ -126,11 +126,57 @@ public class Zoo {
 
     /* METODE LAIN */
 
-    /** @brief update
+    /** update
      * Metode untuk update status posisi dari tiap animal
      */
-    void update() {
-
+    public void update() {
+        for(int i = 0; i < animal_.size(); i++){
+            int temp_x = animal_.get(i).getLocX();
+            int temp_y = animal_.get(i).getLocY();
+            boolean up, down, right, left;
+            if(temp_x > 0 && temp_x < maxCell-1 && temp_y > 0 && temp_y < maxCell-1) {
+                //TODO bikin cek satu2
+                //TODO baru cek ada binatang atau ga, blm cek satu cage dan satu habitat
+                up = (cell_.get(temp_x).get(temp_y - 1).getAnimal() == null);
+                down = (cell_.get(temp_x).get(temp_y + 1).getAnimal() == null);
+                right = (cell_.get(temp_x + 1).get(temp_y).getAnimal() == null);
+                left = (cell_.get(temp_x - 1).get(temp_y).getAnimal() == null);
+            } else {
+                up = false;
+                down = false;
+                right = false;
+                left = false;
+            }
+            int movement = animal_.get(i).move(up,down,right,left);
+            //Swap binatang
+            switch (movement){
+                case 0 : {
+                    cell_.get(temp_x).get(temp_y-1).setAnimalPtr(animal_.get(i));
+                    animal_.get(i).setLocY(animal_.get(i).getLocY() - 1);
+                    cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
+                    break;
+                }
+                case 1 : {
+                    cell_.get(temp_x).get(temp_y+1).setAnimalPtr(animal_.get(i));
+                    animal_.get(i).setLocY(animal_.get(i).getLocY() + 1);
+                    cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
+                    break;
+                }
+                case 2 : {
+                    cell_.get(temp_x+1).get(temp_y).setAnimalPtr(animal_.get(i));
+                    animal_.get(i).setLocX(animal_.get(i).getLocX() + 1);
+                    cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
+                    break;
+                }
+                case 3 : {
+                    cell_.get(temp_x-1).get(temp_y).setAnimalPtr(animal_.get(i));
+                    animal_.get(i).setLocX(animal_.get(i).getLocX() - 1);
+                    cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
+                    break;
+                }
+                default : break;
+            }
+        }
     }
 
     /** @brief Tour
