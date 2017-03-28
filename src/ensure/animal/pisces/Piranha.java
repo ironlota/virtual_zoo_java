@@ -12,6 +12,6 @@ public class Piranha extends Pisces {
     }
 
     public void interact(){
-        System.out.println("Blub!");
+        System.out.println("BiteBiteBite!");
     }
 }

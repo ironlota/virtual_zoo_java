@@ -12,6 +12,6 @@ public class Seahorse extends Pisces {
     }
 
     public void interact(){
-        System.out.println("Blub!");
+        System.out.println("Swimming!");
     }
 }

@@ -12,6 +12,6 @@ public class Starfish extends Pisces {
     }
 
     public void interact(){
-        System.out.println("Blub!");
+        System.out.println("Sshhhhh!");
     }
 }
