@@ -11,6 +11,6 @@ public class Mantaray extends Pisces {
     }
 
     public void interact(){
-        System.out.println("Blub!");
+        System.out.println("Blubub!");
     }
 }

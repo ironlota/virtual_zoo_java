@@ -11,6 +11,6 @@ public class Lion extends Mamalia {
     }
 
     public void interact(){
-        System.out.println("Roar!");
+        System.out.println("Hauummm!");
     }
 }

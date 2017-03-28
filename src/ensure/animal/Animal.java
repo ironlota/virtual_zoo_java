@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by Aldrich on 3/25/2017.
- * @class Animal is an abstract class that can be derived to any animal.
+ * Animal is an abstract class that can be derived to any animal.
  */
 abstract public class Animal {
     //private data member
@@ -82,16 +82,16 @@ abstract public class Animal {
 
     //Other Methods
     /**
-     * @brief getTotalFood is a function to get the total food that an animal eats
+     * getTotalFood is a function to get the total food that an animal eats
      * @return float depends on each animal
      * */
-    protected abstract double getTotalFood();
+    public abstract double getTotalFood();
     /**
-     * @brief interact is function that prints out a message
+     * interact is function that prints out a message
      * */
-    protected abstract void interact();
+    public abstract void interact();
     /**
-     * @brief move is a method to switch places
+     * move is a method to switch places
      * @param up left available
      * @param down down available
      * @param right right available

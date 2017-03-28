@@ -11,6 +11,6 @@ public class BirdOfParadise extends Aves {
     }
 
     public void interact(){
-        System.out.println("Hiiiikkk!");
+        System.out.println("Hueeekkk!");
     }
 }

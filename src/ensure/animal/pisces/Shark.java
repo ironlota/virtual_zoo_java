@@ -11,6 +11,6 @@ public class Shark extends Pisces {
     }
 
     public void interact(){
-        System.out.println("Blublub!");
+        System.out.println("Blukbluk!");
     }
 }
