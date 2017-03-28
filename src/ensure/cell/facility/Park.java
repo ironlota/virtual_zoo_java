@@ -14,6 +14,6 @@ public class Park extends Facility {
     }
 
     public Park(int x, int y) {
-        super(x,y,"Park", "Park", 'P');;
+        super(x,y,"Park", "Park", 'P');
     }
 }
