@@ -14,6 +14,6 @@ public class Caecilia extends Amphibi {
         return (double) (super.getWeight() * 0.01);
     }
     public void interact(){
-        System.out.println("Kroakk!");
+        System.out.println("Caeciliaaaa!");
     }
 }
