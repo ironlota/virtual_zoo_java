@@ -196,14 +196,71 @@ public class Zoo {
      * @param en_x adalah entrence x
      * @param en_y adalah entrence y
      */
-    void Tour(int en_x, int en_y) {
+    public void tour(int en_x, int en_y) {
+        int current_x = en_x;
+        int current_y = en_y;
 
+        boolean [][] visited = new boolean[maxCell][maxCell];
+        for(int i = 0; i < maxCell; i++){
+            for(int j = 0; j < maxCell; j++){
+                visited[i][j] = false;
+            }
+        }
+
+        while(!cell_.get(current_x).get(current_y).getName().equals("RoadExit")) {
+            visited[current_x][current_y] = true;
+            if(current_y<maxCell-1) System.out.println(cell_.get(current_x).get(current_y + 1).getCellType());
+            if(current_x<maxCell-1) System.out.println(cell_.get(current_x + 1).get(current_y).getCellType());
+            if(current_y>0) System.out.println(cell_.get(current_x).get(current_y - 1).getCellType());
+            if(current_x>0) System.out.println(cell_.get(current_x - 1).get(current_y).getCellType());
+            //System.out.println();
+
+            if(cell_.get(current_x).get(current_y+1).getCellType().equals("Road") && !visited[current_x][current_y+1]) { //bawah
+                current_y++;
+            } else if(cell_.get(current_x+1).get(current_y).getCellType().equals("Road") && !visited[current_x+1][current_y]){ //kanan
+                current_x++;
+            } else if(cell_.get(current_x).get(current_y-1).getCellType().equals("Road") && !visited[current_x][current_y-1]){ //atas
+                current_y--;
+            } else if(cell_.get(current_x-1).get(current_y).getCellType().equals("Road") && !visited[current_x-1][current_y]){ //kiri
+                current_x--;
+            } else {
+                break;
+            }
+
+            for(int i = 0; i < maxCell; i++){
+                for(int j = 0; j < maxCell; j++){
+                    if(i == current_x && j == current_y){
+                        System.out.print('@');
+                    } else if(cell_.get(i).get(j).getAnimal() != null){
+                        System.out.print(cell_.get(i).get(j).getAnimal().getSymbol());
+                    } else {
+                        System.out.print(cell_.get(i).get(j).getSymbol());
+                    }
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+        //last print
+        for(int i = 0; i < maxCell; i++){
+            for(int j = 0; j < maxCell; j++){
+                if(i == current_x && j == current_y){
+                    System.out.print('@');
+                } else if(cell_.get(i).get(j).getAnimal() != null){
+                    System.out.print(cell_.get(i).get(j).getAnimal().getSymbol());
+                } else {
+                    System.out.print(cell_.get(i).get(j).getSymbol());
+                }
+            }
+            System.out.println();
+        }
+        System.out.print("Tour Finished!");
     }
 
     /** TotalFood
      * Metode untuk mengambil total makanan dari semua binatang
      */
-    void TotalFood() {
+    public void totalFood() {
 
     }
 

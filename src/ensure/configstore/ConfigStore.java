@@ -170,13 +170,13 @@ public class ConfigStore {
             }
 
         }
-
+        /*
         //testing update
         Zoo.Get(n).update();
         System.out.println("next");
         for(int i = 0; i < n; i++) {
             for(Cell temp : Zoo.Get(n).getAllCell().get(i)) {
-                if(temp.getAnimal() instanceof Animal && temp.getAnimal() != null) {
+                if(temp.getAnimal() != null) {
                     System.out.print(temp.getAnimal().getSymbol() + " ");
                 } else {
                     System.out.print(temp.getSymbol() + " ");
@@ -184,6 +184,9 @@ public class ConfigStore {
             }
             System.out.println();
         }
+        */
+        //testing tour
+        //Zoo.Get(n).tour(0,6);
     }
 }
 
