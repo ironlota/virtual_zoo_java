@@ -261,7 +261,9 @@ public class Zoo {
      * Metode untuk mengambil total makanan dari semua binatang
      */
     public void totalFood() {
-
+        for(int i = 0; i < animal_.size(); i++){
+            System.out.println(animal_.get(i).getName() + " eats " + animal_.get(i).getTotalFood());
+        }
     }
 
     /** AddAnimal

@@ -187,6 +187,8 @@ public class ConfigStore {
         */
         //testing tour
         //Zoo.Get(n).tour(0,6);
+
+        Zoo.Get(n).totalFood();
     }
 }
 
