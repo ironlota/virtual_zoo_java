@@ -132,7 +132,8 @@ public class ConfigStore {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+
             return -1;
         } finally {
 
