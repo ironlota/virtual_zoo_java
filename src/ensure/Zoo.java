@@ -7,7 +7,7 @@ import ensure.cell.facility.Road;
 import java.util.ArrayList;
 
 /**
- * @class Zoo
+ * Zoo
  * Zoo merupakan class yang merepresentasikan sebuah kebun binatang
  * Created by rayandrew on 3/27/2017.
  */
@@ -17,7 +17,7 @@ public class Zoo {
     private ArrayList<Animal> animal_ = new ArrayList<Animal>();
     private ArrayList<ArrayList<Cell>> cell_;
 
-    /** @brief Constructor.
+    /** Constructor.
      * Melakukan inisialisasi kelas
      */
     public Zoo () {
@@ -35,7 +35,7 @@ public class Zoo {
             }
         }
     }
-    /** @brief Constructor(int).
+    /** Constructor(int).
      * Melakukan inisialisasi kelas dengan memasukkan konstanta integer n
      */
     public Zoo(int n) {
@@ -56,52 +56,52 @@ public class Zoo {
         }
     }
 
-    /** @brief get
+    /** get
      * Mengembalikan Zoo class
      */
     public static Zoo Get(int n) {
         return zoo;
     }
 
-    /** @brief getMaxCell
+    /** getMaxCell
      * Mengembalikan max cell
      */
     public static int getMaxCell() {
         return maxCell;
     }
 
-    /** @brief getCell
+    /** getCell
      * Mengembalikan pointer cell di dalam arrayList cell_
      */
     public Cell getCell(int x, int y) {
         return cell_.get(x).get(y);
     }
 
-    /** @brief setCell
+    /** setCell
      * Menginisialisasi animal dan turunannya pada suatu cell
      */
     public <A extends Cell> void setCell(int x,int y, A c) {
         cell_.get(y).set(x,c);
     }
 
-    /** @brief setMaxCell
+    /** setMaxCell
      * Menginisialisasi animal dan turunannya pada suatu cell
      */
     public void setMaxCell(int n) {
         maxCell = n;
     }
 
-    /** @brief getAllCell
+    /** getAllCell
      * Mengembalikan pointer semua cell di dalam vektor of vektor cell_
      */
     public ArrayList<ArrayList<Cell>> getAllCell() {
         return cell_;
     }
 
-    /** @brief SetAnimal
+    /** SetAnimal
      * Berfungsi untuk meletakan animal
      * Asumsi bahwa animal sudah terdefinisi
-     * @param Animal memberikan value animal yang ingin dimasukan
+     * @param a memberikan value animal yang ingin dimasukan
      */
     public <A extends Animal> void SetAnimal(A a) {
         if(a instanceof Animal) {
@@ -109,12 +109,12 @@ public class Zoo {
             animal_.add(a);
         }
     }
-    /** @brief GetAnimal
+    /** GetAnimal
      * Berfungsi untuk mengambil animal
      * Asumsi bahwa vector animal sudah terdefinisi
      * @return Pointer to Animal
-     * @param integer x
-     * @param integer y
+     * @param x posisi x
+     * @param y posisi y
      */
     public Animal GetAnimal(int x,int y) {
         if(cell_.get(x).get(y).getAnimal() instanceof Animal) {
@@ -133,20 +133,32 @@ public class Zoo {
         for(int i = 0; i < animal_.size(); i++){
             int temp_x = animal_.get(i).getLocX();
             int temp_y = animal_.get(i).getLocY();
-            boolean up, down, right, left;
-            if(temp_x > 0 && temp_x < maxCell-1 && temp_y > 0 && temp_y < maxCell-1) {
-                //TODO bikin cek satu2
-                //TODO baru cek ada binatang atau ga, blm cek satu cage dan satu habitat
-                up = (cell_.get(temp_x).get(temp_y - 1).getAnimal() == null);
-                down = (cell_.get(temp_x).get(temp_y + 1).getAnimal() == null);
-                right = (cell_.get(temp_x + 1).get(temp_y).getAnimal() == null);
-                left = (cell_.get(temp_x - 1).get(temp_y).getAnimal() == null);
-            } else {
-                up = false;
-                down = false;
-                right = false;
-                left = false;
+            boolean up = false;
+            boolean down = false;
+            boolean right = false;
+            boolean left = false;
+
+            if(temp_y > 0){
+                up = (cell_.get(temp_x).get(temp_y - 1).getAnimal() == null) &&
+                        (cell_.get(temp_x).get(temp_y - 1).getCageId() == cell_.get(temp_x).get(temp_y).getCageId()) &&
+                        (cell_.get(temp_x).get(temp_y - 1).getCellType().equals(cell_.get(temp_x).get(temp_y).getCellType()));
             }
+            if(temp_y < maxCell-1){
+                down = (cell_.get(temp_x).get(temp_y + 1).getAnimal() == null) &&
+                        (cell_.get(temp_x).get(temp_y + 1).getCageId() == cell_.get(temp_x).get(temp_y).getCageId()) &&
+                        (cell_.get(temp_x).get(temp_y + 1).getCellType().equals(cell_.get(temp_x).get(temp_y).getCellType()));
+            }
+            if(temp_x > 0){
+                left = (cell_.get(temp_x - 1).get(temp_y).getAnimal() == null) &&
+                        (cell_.get(temp_x - 1).get(temp_y).getCageId() == cell_.get(temp_x).get(temp_y).getCageId()) &&
+                        (cell_.get(temp_x - 1).get(temp_y).getCellType().equals(cell_.get(temp_x).get(temp_y).getCellType()));
+            }
+            if(temp_x < maxCell-1){
+                right = (cell_.get(temp_x + 1).get(temp_y).getAnimal() == null) &&
+                        (cell_.get(temp_x + 1).get(temp_y).getCageId() == cell_.get(temp_x).get(temp_y).getCageId()) &&
+                        (cell_.get(temp_x + 1).get(temp_y).getCellType().equals(cell_.get(temp_x).get(temp_y).getCellType()));
+            }
+            
             int movement = animal_.get(i).move(up,down,right,left);
             //Swap binatang
             switch (movement){
@@ -179,23 +191,23 @@ public class Zoo {
         }
     }
 
-    /** @brief Tour
+    /** Tour
      * Metode untuk melakukan tour dari posisi i dan j
-     * @param int en_x adalah entrence x
-     * @param int en_y adalah entrence y
+     * @param en_x adalah entrence x
+     * @param en_y adalah entrence y
      */
     void Tour(int en_x, int en_y) {
 
     }
 
-    /** @brief TotalFood
+    /** TotalFood
      * Metode untuk mengambil total makanan dari semua binatang
      */
     void TotalFood() {
 
     }
 
-    /** @brief AddAnimal
+    /** AddAnimal
      * @param Animal yang berupa masukan
      */
     /*public void <An extends Animal> AddAnimal(An A) {

@@ -75,7 +75,7 @@ abstract public class Cell {
         animal = a;
     }
 
-    public void getCageId(int i) {
+    public void setCageId(int i) {
         cage_id = i;
     }
 
