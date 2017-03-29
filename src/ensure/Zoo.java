@@ -3,7 +3,6 @@ package ensure;
 import ensure.animal.Animal;
 import ensure.cell.Cell;
 import ensure.cell.facility.Road;
-import ensure.configstore.Utility;
 
 import java.util.ArrayList;
 
@@ -27,7 +26,7 @@ public class Zoo {
   public Zoo () {
     cell_ = new ArrayList <>(maxCell);
     for (int i = 0; i < maxCell; i++) {
-      cell_.add(new ArrayList <Cell>(maxCell));
+      cell_.add(new ArrayList <>(maxCell));
     }
     for (int i = 0; i < maxCell; i++) {
       for (int j = 0; j < maxCell; j++) {
@@ -44,11 +43,11 @@ public class Zoo {
    * Constructor(int).
    * Melakukan inisialisasi kelas dengan memasukkan konstanta integer n
    */
-  public Zoo (int n) {
+  private Zoo (int n) {
     maxCell = n;
-    cell_ = new ArrayList <ArrayList <Cell>>(maxCell);
+    cell_ = new ArrayList <>(maxCell);
     for (int i = 0; i < maxCell; i++) {
-      cell_.add(new ArrayList <Cell>());
+      cell_.add(new ArrayList <>());
     }
 
     for (int i = 0; i < maxCell; i++) {
@@ -117,22 +116,22 @@ public class Zoo {
    * Asumsi bahwa animal sudah terdefinisi
    */
   public <A extends Animal> void SetAnimal (A a) {
-    if (a instanceof Animal) {
+    if (a != null) {
       cell_.get(a.getLocX()).get(a.getLocY()).setAnimalPtr(a);
       animal_.add(a);
     }
   }
 
   /**
-   * @param x
-   * @param y
+   * @param x input lokasi x
+   * @param y input lokasi y
    * @return Pointer to Animal
    * GetAnimal
    * Berfungsi untuk mengambil animal
    * Asumsi bahwa vector animal sudah terdefinisi
    */
   public Animal GetAnimal (int x, int y) {
-    if (cell_.get(x).get(y).getAnimal() instanceof Animal) {
+    if (cell_.get(x).get(y).getAnimal() != null) {
       return cell_.get(x).get(y).getAnimal();
     } else {
       return null;
@@ -146,9 +145,9 @@ public class Zoo {
    * Metode untuk update status posisi dari tiap animal
    */
   void update () {
-    for (int i = 0; i < animal_.size(); i++) {
-      int temp_x = animal_.get(i).getLocX();
-      int temp_y = animal_.get(i).getLocY();
+    for (Animal temp : animal_) {
+      int temp_x = temp.getLocX();
+      int temp_y = temp.getLocY();
       boolean up = false;
       boolean down = false;
       boolean right = false;
@@ -175,30 +174,30 @@ public class Zoo {
             (cell_.get(temp_x + 1).get(temp_y).getCellType().equals(cell_.get(temp_x).get(temp_y).getCellType()));
       }
 
-      int movement = animal_.get(i).move(up, down, right, left);
+      int movement = temp.move(up, down, right, left);
       //Swap binatang
       switch (movement) {
         case 0: {
-          cell_.get(temp_x).get(temp_y - 1).setAnimalPtr(animal_.get(i));
-          animal_.get(i).setLocY(animal_.get(i).getLocY() - 1);
+          cell_.get(temp_x).get(temp_y - 1).setAnimalPtr(temp);
+          temp.setLocY(temp.getLocY() - 1);
           cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
           break;
         }
         case 1: {
-          cell_.get(temp_x).get(temp_y + 1).setAnimalPtr(animal_.get(i));
-          animal_.get(i).setLocY(animal_.get(i).getLocY() + 1);
+          cell_.get(temp_x).get(temp_y + 1).setAnimalPtr(temp);
+          temp.setLocY(temp.getLocY() + 1);
           cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
           break;
         }
         case 2: {
-          cell_.get(temp_x + 1).get(temp_y).setAnimalPtr(animal_.get(i));
-          animal_.get(i).setLocX(animal_.get(i).getLocX() + 1);
+          cell_.get(temp_x + 1).get(temp_y).setAnimalPtr(temp);
+          temp.setLocX(temp.getLocX() + 1);
           cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
           break;
         }
         case 3: {
-          cell_.get(temp_x - 1).get(temp_y).setAnimalPtr(animal_.get(i));
-          animal_.get(i).setLocX(animal_.get(i).getLocX() - 1);
+          cell_.get(temp_x - 1).get(temp_y).setAnimalPtr(temp);
+          temp.setLocX(temp.getLocX() - 1);
           cell_.get(temp_x).get(temp_y).setAnimalPtr(null);
           break;
         }
@@ -212,55 +211,67 @@ public class Zoo {
    * Tour
    * Metode untuk melakukan tour dari posisi i dan j
    *
-   * @param en_x adalah entrence x
-   * @param en_y adalah entrence y
+   * @param current_x adalah entrance x
+   * @param current_y adalah entrance y
    */
-  void tour (int en_y, int en_x) throws InterruptedException {
-    int current_x = en_x;
-    int current_y = en_y;
-
+  void tour (int current_y, int current_x) {
     boolean[][] visited = new boolean[maxCell][maxCell];
     for (int i = 0; i < maxCell; i++) {
       for (int j = 0; j < maxCell; j++) {
         visited[i][j] = false;
       }
     }
-    //for(int i = 0; i < maxCell; i++) {
-      //for (int j = 0; j < maxCell; j++) {
-        //if (cell_.get(i).get(j).getName().equals("RoadEntrance")) {
-          //System.out.println(i + " " + j + " " + cell_.get(i).get(j).getSymbol());
-        //}
-      //}
-    //}
-    //System.out.println(current_x + " " + current_y + " " + cell_.get(current_x).get(current_y).getName());
+    /*for(int i = 0; i < maxCell; i++) {
+      for (int j = 0; j < maxCell; j++) {
+        if (cell_.get(i).get(j).getName().equals("RoadEntrance")) {
+          System.out.println(i + " " + j + " " + cell_.get(i).get(j).getSymbol());
+        }
+      }
+    }*/
+    //System.out.println(current_y + " " + current_x + " " + cell_.get(current_x).get(current_y).getName());
     while (!cell_.get(current_x).get(current_y).getName().equals("RoadExit")) {
       visited[current_x][current_y] = true;
       Boolean[] side = new Boolean[4];
+
       for(int i = 0; i < 4; i++) {
         side[i] = false;
       }
+
+      System.out.println(current_x   + " " + current_y + " " + cell_.get(current_x).get(current_y).getName());
       if(current_y < maxCell - 1) {
-        System.out.println("Bawah : " + cell_.get(current_x).get(current_y + 1).getName());
+        System.out.print("Bawah : " + cell_.get(current_x).get(current_y + 1).getName() + " ");
         side[0] =  cell_.get(current_x).get(current_y + 1).getName().equals("Road") && !visited[current_x][current_y + 1];
+        if(side[0]) {
+          side[1] = side[2] = side[3] = false;
+        }
       }
 
       if(current_x < maxCell - 1) {
-        System.out.println("Kanan : " + cell_.get(current_x+1).get(current_y).getName());
-        side[1] = cell_.get(current_x + 1).get(current_y).getName().equals("Road") && !visited[current_x + 1][current_y];
+        System.out.print("Kanan : " + cell_.get(current_x+1).get(current_y).getName() + " ");
+        side[1] = cell_.get(current_x+1).get(current_y).getName().equals("Road") && !visited[current_x + 1][current_y];
+        if(side[1]) {
+          side[0] = side[2] = side[3] = false;
+        }
       }
 
       if(current_y > 0) {
-        System.out.println("Atas : " + cell_.get(current_x).get(current_y - 1).getName());
+        System.out.print("Atas : " + cell_.get(current_x).get(current_y - 1).getName() + " ");
         side[2] = cell_.get(current_x).get(current_y - 1).getName().equals("Road") && !visited[current_x][current_y - 1];
+        if(side[2]) {
+          side[0] = side[1] = side[3] = false;
+        }
       }
 
-      if(current_x > 0) {
-        System.out.println("Kiri : " + cell_.get(current_x-1).get(current_y).getName());
+      if(current_x> 0) {
+        System.out.print("Kiri : " + cell_.get(current_x-1).get(current_y).getName() + " ");
         side[3] = cell_.get(current_x - 1).get(current_y).getName().equals("Road") && !visited[current_x - 1][current_y];
+        if(side[3]) {
+          side[0] = side[1] = side[2] = false;
+        }
       }
 
       for(int i = 0; i < 4; i++) {
-        System.out.print(side[i] + " ");
+        System.out.print(side[i]   + " ");
       }
       System.out.println();
       if (side[0]) { //bawah
@@ -275,13 +286,13 @@ public class Zoo {
         break;
       }
 
-      System.out.println(current_x   + " " + current_y + " " + cell_.get(current_x).get(current_y).getName());
+
       for (int i = 0; i < maxCell; i++) {
         for (int j = 0; j < maxCell; j++) {
           if (i == current_x && j == current_y) {
             System.out.print('@');
           } else {
-            if (cell_.get(i).get(j).getAnimal() instanceof Animal) {
+            if (cell_.get(i).get(j).getAnimal() != null) {
               System.out.print(cell_.get(i).get(j).getAnimal().getSymbol());
             } else {
               System.out.print(cell_.get(i).get(j).getSymbol());
@@ -299,7 +310,7 @@ public class Zoo {
         if (i == current_x && j == current_y) {
           System.out.print('@');
         } else {
-          if (cell_.get(i).get(j).getAnimal() instanceof Animal) {
+          if (cell_.get(i).get(j).getAnimal() != null) {
             System.out.print(cell_.get(i).get(j).getAnimal().getSymbol());
           } else {
             System.out.print(cell_.get(i).get(j).getSymbol());
@@ -318,16 +329,20 @@ public class Zoo {
   void TotalFood () throws InterruptedException {
     float meat = 0;
     float grass = 0;
-    for (int i = 0; i < animal_.size(); i++) {
-      if (animal_.get(i).getFoodType().equals("Carnivore")) {
-        meat += animal_.get(i).getTotalFood();
-      } else if (animal_.get(i).getFoodType().equals("Herbivore")) {
-        grass += animal_.get(i).getTotalFood();
-      } else if (animal_.get(i).getFoodType().equals("Omnivore")) {
-        meat += 0.5 * animal_.get(i).getTotalFood();
-        grass += 0.5 * animal_.get(i).getTotalFood();
+    for (Animal temp : animal_) {
+      switch (temp.getFoodType()) {
+        case "Carnivore":
+          meat += temp.getTotalFood();
+          break;
+        case "Herbivore":
+          grass += temp.getTotalFood();
+          break;
+        case "Omnivore":
+          meat += 0.5 * temp.getTotalFood();
+          grass += 0.5 * temp.getTotalFood();
+          break;
       }
-      System.out.println(animal_.get(i).getName() + " eats " + animal_.get(i).getTotalFood() + " kg");
+      System.out.println(temp.getName() + " eats " +temp.getTotalFood() + " kg");
       System.out.println("Total meat for Carnivores and Omnivores = " + meat + " kg");
       System.out.println("Total grass for Herbivores and Omnivores = " + grass + " kg");
       clearWait(1);
@@ -339,17 +354,19 @@ public class Zoo {
    * Metode untuk menampilkan isi zoo ke layar
    */
   public String toString () {
-    String temp_str = new String();
+    StringBuilder temp_str = new StringBuilder();
     for (int i = 0; i < maxCell; i++) {
       for (Cell temp : cell_.get(i)) {
-        if (temp.getAnimal() instanceof Animal) {
-          temp_str += (temp.getAnimal().getSymbol() + " ");
+        if (temp.getAnimal() != null) {
+          temp_str.append(temp.getAnimal().getSymbol());
+          temp_str.append(" ");
         } else {
-          temp_str += (temp.getSymbol() + " ");
+          temp_str.append(temp.getSymbol());
+          temp_str.append(" ");
         }
       }
-      temp_str += "\n";
+      temp_str.append("\n");
     }
-    return temp_str;
+    return temp_str.toString();
   }
 }

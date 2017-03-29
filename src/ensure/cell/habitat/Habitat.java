@@ -13,7 +13,7 @@ abstract class Habitat extends Cell {
     super();
   }
 
-  <A extends Animal> Habitat (int x, int y, String type_, A a, int id, String name_, char symbol_) {
-    super(x, y, type_, a, id, name_, symbol_);
+  <A extends Animal> Habitat (int x, int y, String type_, A a, int id, char symbol_) {
+    super(x, y, type_, a, id, "", symbol_);
   }
 }

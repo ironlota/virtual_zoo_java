@@ -14,7 +14,7 @@ public class LandHabitat extends Habitat {
     symbol = 'x';
   }
 
-  public <A extends Animal> LandHabitat (int x, int y, A a, int id) {
-    super(x, y, "Land", a, id, "", 'x');
+  public <A extends Animal> LandHabitat (int x, int y, int id) {
+    super(x, y, "Land", null, id, 'x');
   }
 }

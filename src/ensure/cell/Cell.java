@@ -12,10 +12,10 @@ abstract public class Cell {
   private int LocX, LocY;
   protected String name, type;
   private int cage_id;
-  protected Animal animal;
+  private Animal animal;
   protected char symbol;
 
-  public Cell () {
+  protected Cell () {
     LocX = 0;
     LocY = 0;
     type = "";
@@ -25,12 +25,12 @@ abstract public class Cell {
     cage_id = 0;
   }
 
-  public <A extends Animal> Cell (int x, int y, String type_, A a, int id, String name_, char symbol_) {
+  protected <A extends Animal> Cell (int x, int y, String type_, A a, int id, String name_, char symbol_) {
     LocX = x;
     LocY = y;
     type = type_;
     symbol = symbol_;
-    if (a instanceof Animal) {
+    if (a != null) {
       animal = a;
     } else {
       animal = null;

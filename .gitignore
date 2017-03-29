@@ -44,9 +44,8 @@ docs/
 
 # Intellij Project
 .idea/
-virtual_zoo_java.iml
+*.iml
 out/
-checkstyle-7.6.1-all.jar
-config.txt
-result.txt
-checkstyle.txt
+*.jar
+*.txt
+*.MF

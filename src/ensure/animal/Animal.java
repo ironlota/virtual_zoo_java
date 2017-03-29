@@ -15,16 +15,14 @@ abstract public class Animal {
   private int loc_y;
   private String foodType;
   private String habitatType;
-  private static int min = 0; //0 = up, 1 = down, 2 = right, 3 = left
-  private static int max = 4;
   private char symbol;
 
-  public Animal () {
+  protected Animal () {
 
   }
 
   //Default Constructor
-  public Animal (String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat, char symbol_) {
+  protected Animal (String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat, char symbol_) {
     name = inputName;
     weight = inputWeight;
     tamed = isTamed;
@@ -122,6 +120,8 @@ abstract public class Animal {
       boolean found = false;
       int random = -1;
       while (!found) {
+        int min = 0;
+        int max = 4;
         random = ThreadLocalRandom.current().nextInt(min, max + 1);
         found = ((random == 0 && up) || (random == 1 && down) || (random == 2 && right) || (random == 3 && left));
       }

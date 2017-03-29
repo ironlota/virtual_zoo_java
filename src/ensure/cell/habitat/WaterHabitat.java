@@ -14,7 +14,7 @@ public class WaterHabitat extends Habitat {
     symbol = '~';
   }
 
-  public <A extends Animal> WaterHabitat (int x, int y, A a, int id) {
-    super(x, y, "Water", a, id, "", '~');
+  public <A extends Animal> WaterHabitat (int x, int y, int id) {
+    super(x, y, "Water", null, id, '~');
   }
 }
