@@ -8,13 +8,15 @@ import ensure.animal.Animal;
  * amphibi is a type of animal
  */
 abstract public class Amphibi extends Animal {
+
   //methods
-  Amphibi (String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat, char symbol_) {
+  Amphibi(String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType,
+      String inputHabitat, char symbol_) {
     super(inputName, inputWeight, isTamed, x, y, inputFoodType, inputHabitat, symbol_);
   }
 
 
-  public double getTotalFood () {
+  public double getTotalFood() {
     return (super.getWeight() * 0.01);
   }
   //TODO make some private data members

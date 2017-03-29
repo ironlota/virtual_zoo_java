@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Animal is an abstract class that can be derived to any animal.
  */
 abstract public class Animal {
+
   //private data member
   private String name;
   private double weight;
@@ -17,12 +18,13 @@ abstract public class Animal {
   private String habitatType;
   private char symbol;
 
-  protected Animal () {
+  protected Animal() {
 
   }
 
   //Default Constructor
-  protected Animal (String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat, char symbol_) {
+  protected Animal(String inputName, double inputWeight, boolean isTamed, int x, int y,
+      String inputFoodType, String inputHabitat, char symbol_) {
     name = inputName;
     weight = inputWeight;
     tamed = isTamed;
@@ -34,60 +36,60 @@ abstract public class Animal {
   }
 
   //Getters
-  public String getName () {
+  public String getName() {
     return name;
   }
 
-  public double getWeight () {
+  public double getWeight() {
     return weight;
   }
 
-  public boolean isTamed () {
+  public boolean isTamed() {
     return tamed;
   }
 
-  public int getLocX () {
+  public int getLocX() {
     return loc_x;
   }
 
-  public int getLocY () {
+  public int getLocY() {
     return loc_y;
   }
 
-  public String getFoodType () {
+  public String getFoodType() {
     return foodType;
   }
 
-  public String getHabitatType () {
+  public String getHabitatType() {
     return habitatType;
   }
 
   //Setters
-  public void setName (String inputName) {
+  public void setName(String inputName) {
     name = inputName;
   }
 
-  public void setWeight (double inputWeight) {
+  public void setWeight(double inputWeight) {
     weight = inputWeight;
   }
 
-  public void setTamed (boolean inputTamed) {
+  public void setTamed(boolean inputTamed) {
     tamed = inputTamed;
   }
 
-  public void setLocX (int x) {
+  public void setLocX(int x) {
     loc_x = x;
   }
 
-  public void setLocY (int y) {
+  public void setLocY(int y) {
     loc_y = y;
   }
 
-  public void setFoodType (String inputFoodType) {
+  public void setFoodType(String inputFoodType) {
     foodType = inputFoodType;
   }
 
-  public void setHabitatType (String inputHabitat) {
+  public void setHabitatType(String inputHabitat) {
     habitatType = inputHabitat;
   }
 
@@ -98,22 +100,22 @@ abstract public class Animal {
    *
    * @return float depends on each animal
    */
-  public abstract double getTotalFood ();
+  public abstract double getTotalFood();
 
   /**
    * interact is function that prints out a message
    */
-  public abstract void interact ();
+  public abstract void interact();
 
   /**
    * move is a method to switch places
    *
-   * @param up    left available
-   * @param down  down available
+   * @param up left available
+   * @param down down available
    * @param right right available
-   * @param left  left available
+   * @param left left available
    */
-  public int move (boolean up, boolean down, boolean right, boolean left) {
+  public int move(boolean up, boolean down, boolean right, boolean left) {
     if (!up && !down && !right && !left) {
       return -1;
     } else {
@@ -123,13 +125,14 @@ abstract public class Animal {
         int min = 0;
         int max = 4;
         random = ThreadLocalRandom.current().nextInt(min, max + 1);
-        found = ((random == 0 && up) || (random == 1 && down) || (random == 2 && right) || (random == 3 && left));
+        found = ((random == 0 && up) || (random == 1 && down) || (random == 2 && right) || (
+            random == 3 && left));
       }
       return random;
     }
   }
 
-  public char getSymbol () {
+  public char getSymbol() {
     return symbol;
   }
 

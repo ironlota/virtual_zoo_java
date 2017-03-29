@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 /**
  * Class for unit cell testing
- * Created by rufus on 3/29/2017.
+ * Created by rayandrew on 3/29/2017.
  */
 public class TestUnitCell {
   private Cell road;

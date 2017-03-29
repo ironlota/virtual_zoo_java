@@ -6,12 +6,14 @@ package ensure.animal.pisces;
  * Shark is a type of pisces
  */
 public class Shark extends Pisces {
+
   //methods
-  public Shark (String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat) {
+  public Shark(String inputName, double inputWeight, boolean isTamed, int x, int y,
+      String inputFoodType, String inputHabitat) {
     super(inputName, inputWeight, isTamed, x, y, inputFoodType, inputHabitat, 's');
   }
 
-  public void interact () {
+  public void interact() {
     System.out.println("Blukbluk!");
   }
 }

@@ -4,6 +4,7 @@ import ensure.configstore.ConfigStore;
 
 import java.io.IOException;
 import java.util.Scanner;
+
 import static ensure.configstore.Utility.clearWait;
 
 /**
@@ -12,13 +13,14 @@ import static ensure.configstore.Utility.clearWait;
  * Created by rayandrew on 3/28/2017.
  */
 class Main {
-  public static void main (String[] args) throws InterruptedException,IOException {
+
+  public static void main(String[] args) throws InterruptedException, IOException {
     int n, pil;
     Scanner input = new Scanner(System.in);
     System.out.print("Input maxCell : ");
     n = input.nextInt();
     mainMenu();
-    if (ConfigStore.Get() != -1) {
+    if (ConfigStore.Get(n) != -1) {
       System.out.print("Input choice : ");
       pil = input.nextInt();
       if (pil == 1) {
@@ -27,7 +29,7 @@ class Main {
         Zoo.Get(n).tour(6, 0);
       } else if (pil == 3) {
         Zoo.Get(n).TotalFood();
-      } else if(pil == 4) {
+      } else if (pil == 4) {
         MainTest.Testing();
       } else {
         Dynamic d = new Dynamic(n);
@@ -56,41 +58,44 @@ class Main {
 }
 
 class Dynamic implements Runnable {
+
   private Thread t;
   private volatile boolean exit = false;
   private final int n;
-    @Override
-    public void run()  {
-      while (!exit) {
-        System.out.println(Zoo.Get(n));
-        Zoo.Get(n).update();
-        try {
-          clearWait(1);
-        } catch (InterruptedException e) {
-          e.printStackTrace();
-        }
+
+  @Override
+  public void run() {
+    while (!exit) {
+      System.out.println(Zoo.Get(n));
+      Zoo.Get(n).update();
+      try {
+        clearWait(1);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
       }
     }
+  }
 
-  void start () {
+  void start() {
     System.out.println("Starting Dynamic Animal Move");
     if (t == null) {
-      t = new Thread (this, String.valueOf(n));
+      t = new Thread(this, String.valueOf(n));
       try {
         clearWait(2);
       } catch (InterruptedException e) {
         e.printStackTrace();
       }
-      t.start ();
+      t.start();
     }
   }
 
-    void stop() {
-      System.out.println("Stopping Dynamic Animal Move");
-      exit = true;
-      System.out.println("Success!");
-    }
-    Dynamic(int n_) {
-      n = n_;
-    }
+  void stop() {
+    System.out.println("Stopping Dynamic Animal Move");
+    exit = true;
+    System.out.println("Success!");
+  }
+
+  Dynamic(int n_) {
+    n = n_;
+  }
 }

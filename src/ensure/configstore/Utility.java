@@ -7,7 +7,8 @@ import java.util.concurrent.TimeUnit;
  * Created by rayandrew on 3/28/2017.
  */
 public class Utility {
-  public static void clearWait (int sec) throws InterruptedException {
+
+  public static void clearWait(int sec) throws InterruptedException {
     TimeUnit.SECONDS.sleep(sec);
     try {
       final String os = System.getProperty("os.name");

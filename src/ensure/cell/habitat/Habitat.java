@@ -9,11 +9,12 @@ import ensure.cell.Cell;
  * Created by Tasya on 3/26/2017.
  */
 abstract class Habitat extends Cell {
-  Habitat () {
+
+  Habitat() {
     super();
   }
 
-  <A extends Animal> Habitat (int x, int y, String type_, A a, int id, char symbol_) {
+  <A extends Animal> Habitat(int x, int y, String type_, A a, int id, char symbol_) {
     super(x, y, type_, a, id, "", symbol_);
   }
 }

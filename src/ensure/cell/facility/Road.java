@@ -6,14 +6,15 @@ package ensure.cell.facility;
  * Created by Girvandi on 3/26/2017.
  */
 public class Road extends Facility {
-  public Road () {
+
+  public Road() {
     super();
     type = "Road";
     name = "Road";
     symbol = ' ';
   }
 
-  public Road (int x, int y, String name_, char symbol_) {
+  public Road(int x, int y, String name_, char symbol_) {
     super(x, y, "Road", name_, symbol_);
   }
 }

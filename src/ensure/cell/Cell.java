@@ -9,13 +9,14 @@ import ensure.animal.Animal;
  * Created by Girvandi on 3/25/2017.
  */
 abstract public class Cell {
+
   private int LocX, LocY;
   protected String name, type;
   private int cage_id;
   private Animal animal;
   protected char symbol;
 
-  protected Cell () {
+  protected Cell() {
     LocX = 0;
     LocY = 0;
     type = "";
@@ -25,7 +26,8 @@ abstract public class Cell {
     cage_id = 0;
   }
 
-  protected <A extends Animal> Cell (int x, int y, String type_, A a, int id, String name_, char symbol_) {
+  protected <A extends Animal> Cell(int x, int y, String type_, A a, int id, String name_,
+      char symbol_) {
     LocX = x;
     LocY = y;
     type = type_;
@@ -39,47 +41,47 @@ abstract public class Cell {
     name = name_;
   }
 
-  public int getLocX () {
+  public int getLocX() {
     return LocX;
   }
 
-  public int getLocY () {
+  public int getLocY() {
     return LocY;
   }
 
-  public String getCellType () {
+  public String getCellType() {
     return type;
   }
 
-  public Animal getAnimal () {
+  public Animal getAnimal() {
     return animal;
   }
 
-  public int getCageId () {
+  public int getCageId() {
     return cage_id;
   }
 
-  public void setLocX (int x) {
+  public void setLocX(int x) {
     LocX = x;
   }
 
-  public void setLocY (int y) {
+  public void setLocY(int y) {
     LocY = y;
   }
 
-  public void setType (String s) {
+  public void setType(String s) {
     type = s;
   }
 
-  public <A extends Animal> void setAnimalPtr (A a) {
+  public <A extends Animal> void setAnimalPtr(A a) {
     animal = a;
   }
 
-  public void setCageId (int i) {
+  public void setCageId(int i) {
     cage_id = i;
   }
 
-  public void setName (String name_) {
+  public void setName(String name_) {
     name = name_;
   }
 
@@ -87,11 +89,11 @@ abstract public class Cell {
    * GetName
    * Setter variable name
    */
-  public String getName () {
+  public String getName() {
     return name;
   }
 
-  public char getSymbol () {
+  public char getSymbol() {
     return symbol;
   }
 }

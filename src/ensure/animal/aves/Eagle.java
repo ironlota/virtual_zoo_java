@@ -6,12 +6,14 @@ package ensure.animal.aves;
  * Eagle is a type of aves
  */
 public class Eagle extends Aves {
+
   //methods
-  public Eagle (String inputName, double inputWeight, boolean isTamed, int x, int y, String inputFoodType, String inputHabitat) {
+  public Eagle(String inputName, double inputWeight, boolean isTamed, int x, int y,
+      String inputFoodType, String inputHabitat) {
     super(inputName, inputWeight, isTamed, x, y, inputFoodType, inputHabitat, 'e');
   }
 
-  public void interact () {
+  public void interact() {
     System.out.println("Hiiiikkk!");
   }
 }

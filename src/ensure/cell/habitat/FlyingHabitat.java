@@ -8,13 +8,14 @@ import ensure.animal.Animal;
  * Created by Tasya on 3/26/2017.
  */
 public class FlyingHabitat extends Habitat {
-  public FlyingHabitat () {
+
+  public FlyingHabitat() {
     super();
     type = "Flying";
     symbol = 'O';
   }
 
-  public <A extends Animal> FlyingHabitat (int x, int y, A a, int id) {
-    super(x, y, "Flying", a, id, 'O');
+  public <A extends Animal> FlyingHabitat(int x, int y, int id) {
+    super(x, y, "Flying", null, id, 'O');
   }
 }
