@@ -4,7 +4,7 @@ import ensure.cell.Cell;
 
 /**
  * Abstract class Facility
- * Created by rufus on 3/26/2017.
+ * Created by Girvandi on 3/26/2017.
  */
 abstract public class Facility extends Cell {
   public Facility () {

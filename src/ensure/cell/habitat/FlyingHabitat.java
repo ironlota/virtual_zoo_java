@@ -5,7 +5,7 @@ import ensure.animal.Animal;
 /**
  * FlyingHabitat
  * FlyingHabitat merupakan habitat untuk hewan yang tinggal di udara
- * Created by rayandrew on 3/26/2017.
+ * Created by Tasya on 3/26/2017.
  */
 public class FlyingHabitat extends Habitat {
   public FlyingHabitat () {

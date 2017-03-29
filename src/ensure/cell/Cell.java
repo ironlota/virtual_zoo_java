@@ -6,7 +6,7 @@ import ensure.animal.Animal;
  * Cell
  * Cell merupakan container dan parent dari kelas-kelas yang merepresentasikan satu kotak pada zoo
  * <p>
- * Created by rayandrew on 3/25/2017.
+ * Created by Girvandi on 3/25/2017.
  */
 abstract public class Cell {
   private int LocX, LocY;

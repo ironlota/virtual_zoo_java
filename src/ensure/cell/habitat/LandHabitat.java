@@ -5,7 +5,7 @@ import ensure.animal.Animal;
 /**
  * LandHabitat
  * LandHabitat merupakan habitat untuk hewan yang tinggal di darat
- * Created by rayandrew on 3/26/2017.
+ * Created by Tasya on 3/26/2017.
  */
 public class LandHabitat extends Habitat {
   public LandHabitat () {

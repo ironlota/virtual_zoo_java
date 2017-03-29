@@ -3,7 +3,7 @@ package ensure.cell.facility;
 /**
  * Road
  * Road merupakan facility yang merepresentasikan sebuah jalan di dalam kebun binatang
- * Created by rayandrew on 3/26/2017.
+ * Created by Girvandi on 3/26/2017.
  */
 public class Road extends Facility {
   public Road () {

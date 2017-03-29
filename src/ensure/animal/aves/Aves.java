@@ -3,7 +3,7 @@ package ensure.animal.aves;
 import ensure.animal.Animal;
 
 /**
- * Created by Aldrich on 3/25/2017.
+ * Created by Girvandi on 3/25/2017.
  *
  * aves is a type of animal
  */

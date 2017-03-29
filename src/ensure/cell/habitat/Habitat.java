@@ -6,7 +6,7 @@ import ensure.cell.Cell;
 /**
  * Habitat
  * Habitat merupakan cell yang merepresentasikan tempat tinggal dari suatu hewan
- * Created by rayandrew on 3/26/2017.
+ * Created by Tasya on 3/26/2017.
  */
 abstract class Habitat extends Cell {
   Habitat () {

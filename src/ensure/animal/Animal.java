@@ -3,7 +3,7 @@ package ensure.animal;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Created by Aldrich on 3/25/2017.
+ * Created by rayandrew on 3/25/2017.
  * Animal is an abstract class that can be derived to any animal.
  */
 abstract public class Animal {

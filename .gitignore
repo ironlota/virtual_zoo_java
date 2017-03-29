@@ -46,3 +46,7 @@ docs/
 .idea/
 virtual_zoo_java.iml
 out/
+checkstyle-7.6.1-all.jar
+config.txt
+result.txt
+checkstyle.txt

@@ -3,7 +3,7 @@ package ensure.animal.amphibi;
 /**
  * Exolotl
  * Exolotl merupakan hewan yang berkelas Amphibi dan habitatnya di water dan darat.
- * Created by rayandrew on 3/27/2017.
+ * Created by Aldrich on 3/27/2017.
  */
 public class Exolotl extends Amphibi {
   /**

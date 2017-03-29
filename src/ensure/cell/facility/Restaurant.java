@@ -3,7 +3,7 @@ package ensure.cell.facility;
 /**
  * Restaurant
  * Restaurant merupakan facility yang merepresentasikan sebuah restoran dalam kebun binatang
- * Created by rayandrew on 3/26/2017.
+ * Created by Girvandi on 3/26/2017.
  */
 public class Restaurant extends Facility {
   public Restaurant () {

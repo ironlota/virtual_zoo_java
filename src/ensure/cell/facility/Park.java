@@ -3,7 +3,7 @@ package ensure.cell.facility;
 /**
  * Park
  * Park merupakan facility yang merepresentasikan taman dalam kebun binatang
- * Created by rufus on 3/26/2017.
+ * Created by Girvandi on 3/26/2017.
  */
 public class Park extends Facility {
   public Park () {

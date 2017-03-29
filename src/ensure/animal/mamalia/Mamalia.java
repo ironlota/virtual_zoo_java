@@ -3,7 +3,7 @@ package ensure.animal.mamalia;
 import ensure.animal.Animal;
 
 /**
- * Created by Aldrich on 3/25/2017.
+ * Created by Girvandi on 3/25/2017.
  *
  * Mammal is a type of animal
  */

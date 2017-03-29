@@ -3,7 +3,7 @@ package ensure.animal.mamalia;
 /**
  * Class Deer
  * Extends of Mamalia
- * Created by rayandrew on 3/27/2017.
+ * Created by Aldrich on 3/27/2017.
  */
 public class Deer extends Mamalia {
   //methods
